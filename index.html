@@ -6,13 +6,19 @@
 <title>AgentGate by MAGON — Runtime Control for AI Agents</title>
 <meta name="description" content="Every AI agent tool call gets a decision: ALLOW, ASK or BLOCK. AgentGate is open source runtime control for agents that use real tools and systems.">
 <meta name="theme-color" content="#070a12">
-<link rel="icon" href="assets/branding/magon-logo-transparent.png">
+<link rel="icon" href="assets/branding/magon-logo-transparent.webp">
+<link rel="canonical" href="https://magon-site.github.io/magon-site/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AgentGate by MAGON — Runtime Control for AI Agents">
 <meta property="og:description" content="Every AI agent tool call gets a decision: ALLOW, ASK or BLOCK. Try it live.">
-<!-- TODO after hosting: make this an absolute URL, e.g. https://YOUR-DOMAIN/assets/branding/agentgate-logo.png -->
-<meta property="og:image" content="assets/branding/agentgate-logo.png">
+<meta property="og:url" content="https://magon-site.github.io/magon-site/">
+<meta property="og:image" content="https://magon-site.github.io/magon-site/assets/branding/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AgentGate by MAGON — Runtime Control for AI Agents">
+<meta name="twitter:description" content="Every AI agent tool call gets a decision: ALLOW, ASK or BLOCK. Try it live.">
+<meta name="twitter:image" content="https://magon-site.github.io/magon-site/assets/branding/social.jpg">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
@@ -313,6 +319,26 @@ footer a:hover{color:var(--text)}
   .install code{white-space:normal;overflow-wrap:break-word;overflow:visible;font-size:13px;line-height:1.55;min-width:0;flex:1;padding-top:6px}
   .win pre{font-size:11.5px}
 }
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.layers{display:grid;gap:14px;margin-top:26px;text-align:left}
+@media(min-width:760px){.layers{grid-template-columns:1fr 1fr}}
+.layer{border:1px solid var(--line);border-radius:14px;background:var(--bg-2);padding:22px}
+.layer h3{font-size:18px}
+.layer p{margin-top:8px;color:var(--muted);font-size:15px}
+.layer code,.fact code{font-family:var(--mono);font-size:.92em;color:#a9c1f5}
+.grid.four{grid-template-columns:1fr}
+@media(min-width:620px){.grid.four{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid.four{grid-template-columns:repeat(4,1fr)}}
+.uc{margin-top:12px!important;padding-top:12px;border-top:1px solid var(--line);font-size:13.5px!important;color:var(--text)!important}
+.uc b{font-family:var(--mono);font-weight:600;font-size:.95em}
+.uc .t{font-weight:800;font-size:12px;letter-spacing:.06em;padding:2px 8px;border-radius:999px;border:1px solid}
+.uc .t.allow{color:#4be3a1;border-color:#1f6d4d;background:#0a2018}
+.uc .t.ask{color:#f3c767;border-color:#6d5a1f;background:#241d0a}
+.uc .t.block{color:#ff7285;border-color:#6d1f2c;background:#240a10}
+.ba{display:grid;gap:12px;margin-top:26px;text-align:left}
+@media(min-width:760px){.ba{grid-template-columns:1fr 1.25fr}}
+.ba pre{white-space:pre-wrap;word-break:break-word}
+#developers .fine{margin-top:12px}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
@@ -326,7 +352,7 @@ footer a:hover{color:var(--text)}
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="MAGON">
-      <img src="assets/branding/magon-logo-transparent.png" alt="MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/magon-logo.png'}else{this.style.display='none';this.nextElementSibling.style.display='block'}">
+      <img src="assets/branding/magon-logo-transparent.webp" alt="MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/magon-logo.png'}else{this.style.display='none';this.nextElementSibling.style.display='block'}">
       <span class="wordmark" style="display:none">MAGON</span>
     </a>
     <nav class="nav-links" aria-label="Sections">
@@ -335,6 +361,7 @@ footer a:hover{color:var(--text)}
       <a href="#attack-lab">Attack Lab</a>
       <a href="#developers">Developers</a>
       <a href="#about">About</a>
+      <a href="https://github.com/walid-agentgate/magon" target="_blank" rel="noopener">GitHub</a>
     </nav>
     <a class="btn primary small" href="https://magon-agentgate-staging.onrender.com/" target="_blank" rel="noopener">Live demo</a>
   </div>
@@ -345,14 +372,14 @@ footer a:hover{color:var(--text)}
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <img class="hero-logo" src="assets/branding/agentgate-logo-transparent.png" alt="AgentGate by MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/agentgate-logo.png'}else{this.style.display='none'}">
-      <div class="ver"><span class="dot"></span><span>v<span class="v">2.14.12</span> · open source · Node 18+</span></div>
+      <img class="hero-logo" src="assets/branding/agentgate-logo-transparent.webp" alt="AgentGate by MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/agentgate-logo.png'}else{this.style.display='none'}">
+      <div class="ver"><span class="dot"></span><span>v<span class="v">2.14.12</span> · Beta · MIT · Node 18+</span></div>
       <h1>Control what your AI agents can <em>actually do.</em></h1>
       <p class="lead">Runtime control for AI agents that use real tools and systems.</p>
       <p class="support">AgentGate evaluates every tool call against your policies, blocks unauthorized actions, and routes sensitive operations for human approval.</p>
       <div class="actions">
-        <a class="btn primary" href="#developers">Get Started</a>
-        <a class="btn" href="#try">See it in action</a>
+        <a class="btn primary" href="#developers">Install AgentGate</a>
+        <a class="btn" href="#try">Try the decisions</a>
       </div>
 
       <div class="feed-wrap">
@@ -399,6 +426,24 @@ footer a:hover{color:var(--text)}
   </section>
 
   <!-- TRY IT -->
+  <section id="layers" class="reveal">
+    <div class="wrap center">
+      <span class="eyebrow">TWO LAYERS</span>
+      <h2>One control boundary. Two ways to use it.</h2>
+      <div class="layers">
+        <div class="layer">
+          <h3>AgentGate Runtime</h3>
+          <p>Runs inside your Node.js app. <code>createAgentGate</code> and <code>gate.protect</code> wrap your tools and decide ALLOW, ASK or BLOCK before the real handler runs.</p>
+        </div>
+        <div class="layer">
+          <h3>AgentGate Control Plane</h3>
+          <p>The dashboard around it: policies, human approvals, replay and the Attack Lab. Open the live demo to see it, or run it yourself with <code>agentgate dev</code>.</p>
+        </div>
+      </div>
+      <p class="fine center">AgentGate is currently in beta.</p>
+    </div>
+  </section>
+
   <section id="try" class="reveal">
     <div class="wrap">
       <div class="panel">
@@ -535,6 +580,19 @@ footer a:hover{color:var(--text)}
   </section>
 
   <!-- DEVELOPERS -->
+  <section id="use-cases" class="reveal">
+    <div class="wrap center">
+      <span class="eyebrow">USE CASES</span>
+      <h2>Built for agents that touch real systems.</h2>
+      <div class="grid four">
+        <div class="fact"><h3>Support agents</h3><p>An agent should not delete a customer on its own.</p><p class="uc"><b>delete_customer</b> &rarr; <span class="t ask">ASK</span> for human approval.</p></div>
+        <div class="fact"><h3>Finance agents</h3><p>Refunds need limits, not trust.</p><p class="uc"><b>refund $8,000</b> &rarr; <span class="t block">BLOCK</span> above the limit.</p></div>
+        <div class="fact"><h3>Data agents</h3><p>Bulk exports should never run by accident.</p><p class="uc"><b>export_all</b> &rarr; <span class="t block">BLOCK</span> on the block list.</p></div>
+        <div class="fact"><h3>Read-only work</h3><p>Safe actions keep flowing without friction.</p><p class="uc"><b>read_customer</b> &rarr; <span class="t allow">ALLOW</span> and continue.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section id="developers" class="reveal">
     <div class="wrap">
       <div class="panel">
@@ -570,6 +628,16 @@ footer a:hover{color:var(--text)}
           </div>
         </div>
 
+        <div class="ba">
+          <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>before</span></div>
+<pre><span class="k">const</span> refund = refundHandler;</pre></div>
+          <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>after</span></div>
+<pre><span class="k">const</span> refund = gate.<span class="f">protect</span>(refundHandler, {
+  tool: <span class="s">'refund'</span>, action: <span class="s">'refund'</span>
+});</pre></div>
+        </div>
+        <p class="fine center">Protect the tools you already use. Your handlers stay as they are.</p>
+
         <div class="steps">
           <div class="step"><strong>Connect</strong><p>Connect your agent to the runtime control layer.</p></div>
           <div class="step"><strong>Define</strong><p>Define the actions your agent is allowed to perform.</p></div>
@@ -579,7 +647,8 @@ footer a:hover{color:var(--text)}
 
         <div class="actions center">
           <a class="btn primary" href="https://www.npmjs.com/package/agentgate-runtime-control" target="_blank" rel="noopener">View on npm</a>
-          <a class="btn" href="https://magon-agentgate-staging.onrender.com/" target="_blank" rel="noopener">Open the live demo</a>
+          <a class="btn" href="https://github.com/walid-agentgate/magon" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://github.com/walid-agentgate/magon/tree/main/docs" target="_blank" rel="noopener">Read the docs</a>
         </div>
       </div>
     </div>
@@ -598,13 +667,13 @@ footer a:hover{color:var(--text)}
         </div>
 
         <div class="about">
-          <img class="about-logo" src="assets/branding/magon-logo-transparent.png" alt="MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/magon-logo.png'}else{this.style.display='none'}">
+          <img class="about-logo" src="assets/branding/magon-logo-transparent.webp" alt="MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/magon-logo.png'}else{this.style.display='none'}">
           <span class="eyebrow">ABOUT MAGON</span>
           <h3>Ancient roots. Modern control.</h3>
           <p>MAGON is the umbrella identity behind AgentGate. The name draws from the ancient Punic and Carthaginian name Magon, connecting North African heritage with modern control infrastructure.</p>
           <div class="family">
             <span class="family-label">FIRST PRODUCT</span>
-            <img class="family-logo" src="assets/branding/agentgate-logo-transparent.png" alt="AgentGate by MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/agentgate-logo.png'}else{this.style.display='none'}">
+            <img class="family-logo" src="assets/branding/agentgate-logo-transparent.webp" alt="AgentGate by MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/agentgate-logo.png'}else{this.style.display='none'}">
             <p>AgentGate is the first product under MAGON, built to provide runtime control for AI agents.</p>
           </div>
         </div>
@@ -617,7 +686,7 @@ footer a:hover{color:var(--text)}
 <footer>
   <div class="wrap">
     <div class="foot-brand">
-      <img class="foot-logo" src="assets/branding/magon-logo-transparent.png" alt="MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/magon-logo.png'}else{this.style.display='none'}">
+      <img class="foot-logo" src="assets/branding/magon-logo-transparent.webp" alt="MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/magon-logo.png'}else{this.style.display='none'}">
       <div>
         <strong>MAGON</strong><br>
         Ancient roots. Modern control.<br>
@@ -628,6 +697,11 @@ footer a:hover{color:var(--text)}
       <a href="https://magon-agentgate-staging.onrender.com/" target="_blank" rel="noopener">Live demo</a>
       <a href="https://www.npmjs.com/package/agentgate-runtime-control" target="_blank" rel="noopener">npm</a>
       <a href="#developers">Quick start</a>
+      <a href="https://github.com/walid-agentgate/magon" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/walid-agentgate/magon/tree/main/docs" target="_blank" rel="noopener">Docs</a>
+      <a href="https://github.com/walid-agentgate/magon/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a>
+      <a href="https://github.com/walid-agentgate/magon/blob/main/SECURITY.md" target="_blank" rel="noopener">Security</a>
+      <a href="https://github.com/walid-agentgate/magon/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
     </nav>
   </div>
 </footer>
