@@ -345,6 +345,18 @@ footer a:hover{color:var(--text)}
   .js .reveal{opacity:1;transform:none}
   .badge.pending::after{content:"evaluating"}
 }
+
+/* proof */
+.shot{margin:0;border:1px solid var(--line-2);border-radius:14px;background:var(--bg-2);overflow:hidden;text-align:left}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:14px 16px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+.shot figcaption strong{color:var(--text)}
+.shot.wide{margin-top:34px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+@media(max-width:720px){.shots{grid-template-columns:1fr}}
+.shot pre{margin:0;padding:16px 18px;font-family:var(--mono);font-size:13px;line-height:1.7;color:#cfe0ff;overflow-x:auto}
+.shot pre b{font-weight:800}.oa{color:#8eeac0}.oq{color:#f5c66e}.ob{color:#ff8a8a}
+@media(max-width:720px){.shot pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}}
 </style>
 </head>
 <body>
@@ -593,7 +605,40 @@ footer a:hover{color:var(--text)}
     </div>
   </section>
 
-  <section id="developers" class="reveal">
+  <!-- PROOF -->
+  <section id="proof" class="reveal">
+    <div class="wrap center">
+      <span class="eyebrow">SEE IT WORK</span>
+      <h2>Real output, not mockups.</h2>
+      <p class="lead">Captured from the AgentGate staging demo and from running the example included in the repository.</p>
+      <figure class="shot wide">
+        <div class="win">
+          <div class="win-bar"><i></i><i></i><i></i><span>node examples/protect-first-tool.mjs</span></div>
+<pre>AgentGate — protecting four real tools
+
+read_customer      -&gt; EXECUTED (<b class="oa">ALLOW</b>) — Read-only action allowed
+delete_customer    -&gt; APPROVAL_REQUIRED (<b class="oq">ASK</b>) — Destructive action requires approval
+refund (small)     -&gt; APPROVAL_REQUIRED (<b class="oq">ASK</b>) — Destructive action requires approval
+refund (large)     -&gt; BLOCKED (<b class="ob">BLOCK</b>) — Amount exceeds the maximum permitted threshold
+export_all         -&gt; BLOCKED (<b class="ob">BLOCK</b>) — Action explicitly blocked by policy
+
+Nothing above BLOCK or pending ASK ever reached its real handler.</pre>
+        </div>
+        </figure>
+      <div class="shots">
+        <figure class="shot">
+          <a href="assets/screens/attack-lab.jpg" target="_blank" rel="noopener"><img src="assets/screens/attack-lab.jpg" width="536" height="400" loading="lazy" alt="Attack Lab results: five built-in scenarios, all blocked by the gateway"></a>
+          <figcaption><strong>Attack Lab.</strong> Five built-in scenarios, all blocked by the live gateway. These are our own test scenarios, not an independent benchmark.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="assets/screens/policies.jpg" target="_blank" rel="noopener"><img src="assets/screens/policies.jpg" width="536" height="420" loading="lazy" alt="Policies screen: create a draft, test the boundary, review, activate"></a>
+          <figcaption><strong>Deterministic policies.</strong> A policy is tested against explicit cases before it can be activated.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+<section id="developers" class="reveal">
     <div class="wrap">
       <div class="panel">
         <div class="center">
