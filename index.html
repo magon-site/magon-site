@@ -373,7 +373,7 @@ footer a:hover{color:var(--text)}
   <section class="hero">
     <div class="wrap">
       <img class="hero-logo" src="assets/branding/agentgate-logo-transparent.webp" alt="AgentGate by MAGON" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='assets/branding/agentgate-logo.png'}else{this.style.display='none'}">
-      <div class="ver"><span class="dot"></span><span>v<span class="v">2.14.13</span> · Beta · MIT · Node 18+</span></div>
+      <div class="ver"><span class="dot"></span><span>v<span class="v">2.14.14</span> · Beta · MIT · Node 18+</span></div>
       <h1>Control what your AI agents can <em>actually do.</em></h1>
       <p class="lead">Runtime control for AI agents that use real tools and systems.</p>
       <p class="support">AgentGate evaluates every tool call against your policies, blocks unauthorized actions, and routes sensitive operations for human approval.</p>
@@ -566,7 +566,7 @@ footer a:hover{color:var(--text)}
         <p class="fine" style="text-align:left">These results represent the current controlled demo/test environment, not an independent security benchmark.</p>
 
         <div class="grid three">
-          <div class="fact"><div class="num">205/205</div><h3>Regression tests passing</h3><p>The full suite passes on the current release, v<span class="v">2.14.13</span>.</p></div>
+          <div class="fact"><div class="num">205/205</div><h3>Regression tests passing</h3><p>The full suite passes on the current release, v<span class="v">2.14.14</span>.</p></div>
           <div class="fact"><div class="num">ASK</div><h3>Unknown actions need approval</h3><p>An action AgentGate doesn't recognize is not silently allowed. Strict setups can block it outright.</p></div>
           <div class="fact"><div class="num">Redact</div><h3>API-key fields never leak</h3><p>Egress Guard blocks and redacts API-key fields in tool output, even when the value matches no known key format.</p></div>
         </div>
@@ -709,7 +709,7 @@ footer a:hover{color:var(--text)}
 <script>
 (function(){
   /* UPDATE ON EACH RELEASE: the only place the version number lives */
-  var VERSION = '2.14.13';
+  var VERSION = '2.14.14';
   var vs = document.querySelectorAll('.v');
   for(var v = 0; v < vs.length; v++){ vs[v].textContent = VERSION; }
 
